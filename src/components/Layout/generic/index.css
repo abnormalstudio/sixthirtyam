@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif SC", serif;
+  font-size: 18px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Abhaya Libre", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #de356a;
+}
+a:hover {
+  color: #540e33;
+}
