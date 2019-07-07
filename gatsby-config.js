@@ -6,6 +6,8 @@ module.exports = {
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -20,6 +22,13 @@ module.exports = {
       options: {
         spaceId: "xv2itdzun2nc",
         accessToken: "a_jHgo3ouFtVu8xSLNjsmsx6RfYVxxMlIJc7Yh90I9g"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`
       }
     },
     `gatsby-plugin-emotion`,
