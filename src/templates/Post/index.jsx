@@ -58,7 +58,7 @@ const Post = props => {
       >
         <div
           css={css`
-            width: 60%;
+            width: 50%;
 
             @media (max-width: 1024px) {
               width: 100%;
@@ -101,7 +101,7 @@ const Post = props => {
 
         <div
           css={css`
-            width: 40%;
+            width: 50%;
             background-color: ${post.panelColor || "#afbec5"};
             position: relative;
             box-shadow: 0 0px 2px rgba(0, 0, 0, 0.16),
