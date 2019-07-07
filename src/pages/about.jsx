@@ -26,6 +26,9 @@ const About = () => (
           <Heading>{data.contentfulSnippet.name}</Heading>
           <div
             css={css`
+              max-width: 800px;
+              margin: 0 auto;
+
               p {
                 padding: 1rem;
               }

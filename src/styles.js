@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  margin-top: 2rem;
+  margin-top: 4rem;
 `;
 
 const Heading = styled.h1`
