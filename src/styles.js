@@ -1,7 +1,12 @@
 import styled from "@emotion/styled";
 
 const Container = styled.div`
-  margin-top: 4rem;
+  padding-top: 4rem;
+
+  @media (min-width: 1024px) {
+    height: 100vh;
+    overflow-y: scroll;
+  }
 `;
 
 const Heading = styled.h1`

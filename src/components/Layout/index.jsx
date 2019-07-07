@@ -11,7 +11,6 @@ import "./generic/index.css";
 
 const Main = styled.main`
   width: 75%;
-
   @media (max-width: 1024px) {
     width: 100%;
   }
@@ -38,8 +37,7 @@ const Layout = props => (
           flex-wrap: wrap;
 
           @media (max-width: 1024px) {
-            height: auto;
-            overflow-y: auto;
+            overflow-y: scroll;
           }
         `}
       >
