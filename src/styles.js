@@ -3,15 +3,19 @@ import styled from "@emotion/styled";
 const Container = styled.div`
   padding-top: 4rem;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1025px) {
     height: 100vh;
     overflow-y: scroll;
+  }
+  @media (max-width: 1024px) {
+    /* min-height: 100vh; */
+    padding: 2rem;
   }
 `;
 
 const Heading = styled.h1`
   font-size: 2.5rem;
-  margin: 50px;
+  margin: 1rem;
   text-align: center;
 `;
 

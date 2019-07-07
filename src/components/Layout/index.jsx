@@ -35,6 +35,8 @@ const Layout = props => (
           overflow-y: hidden;
           display: flex;
           flex-wrap: wrap;
+          align-items: flex-start;
+          align-content: flex-start;
 
           @media (max-width: 1024px) {
             overflow-y: scroll;
