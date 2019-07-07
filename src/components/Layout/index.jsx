@@ -44,6 +44,7 @@ const Layout = props => (
         `}
       >
         <Helmet title={data.site.siteMetadata.title}>
+          <html lang="en" />
           <link
             href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Noto+Serif+SC:200&display=swap"
             rel="stylesheet"
