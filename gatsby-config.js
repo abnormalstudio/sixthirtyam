@@ -4,7 +4,21 @@ module.exports = {
     siteUrl: "https://www.sixthirtyam.com"
   },
   plugins: [
-    `gatsby-plugin-favicon`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/favicon.png",
+        appName: "6:30 AM",
+        appDescription: null,
+        dir: "auto",
+        lang: "en-US",
+        background: "#fff",
+        theme_color: "#fff",
+        display: "standalone",
+        orientation: "any",
+        start_url: "/?homescreen=1"
+      }
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
