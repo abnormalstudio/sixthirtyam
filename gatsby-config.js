@@ -4,6 +4,7 @@ module.exports = {
     siteUrl: "https://www.sixthirtyam.com"
   },
   plugins: [
+    `gatsby-plugin-favicon`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
