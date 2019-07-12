@@ -49,6 +49,11 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-netlify`
+    {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        mergeCachingHeaders: false // boolean to turn off the default caching headers
+      }
+    }
   ]
 };
