@@ -24,11 +24,13 @@ const Tag = ({ pathContext }) => {
           flex-wrap: wrap;
           align-items: flex-start;
           align-content: flex-start;
-          min-height: 100vh;
+          overflow-y: scroll;
+          height: 100vh;
           padding: 0.25rem;
 
           @media (max-width: 1024px) {
             height: auto;
+            overflow-y: auto;
           }
         `}
       >
