@@ -8,8 +8,7 @@ const Container = styled.div`
     overflow-y: scroll;
   }
   @media (max-width: 1024px) {
-    /* min-height: 100vh; */
-    padding: 2rem;
+    padding: 0rem;
   }
 `;
 

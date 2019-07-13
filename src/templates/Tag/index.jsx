@@ -9,15 +9,6 @@ const Tag = ({ pathContext }) => {
   return (
     <Layout>
       <Helmet title={`#${tag}`} />
-      <h2
-        css={css`
-          font-size: 2rem;
-          margin: 0.5rem;
-          margin-top: 1.5rem;
-        `}
-      >
-        #{tag}
-      </h2>
       <div
         css={css`
           display: flex;
@@ -34,6 +25,17 @@ const Tag = ({ pathContext }) => {
           }
         `}
       >
+        <h2
+          css={css`
+            width: 100vw;
+            font-size: 2rem;
+            margin: 0.5rem;
+            margin-top: 1.5rem;
+          `}
+        >
+          #{tag}
+        </h2>
+
         {posts.map(post => (
           <Tile post={post} key={post.id} />
         ))}
