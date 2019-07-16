@@ -27,12 +27,15 @@ const Tile = ({ post }) => {
         to={`/outfit/${slugify(post.date)}`}
         css={css`
           display: block;
-          padding: 0.25rem;
+          padding: 5px;
         `}
       >
         <img
           css={css`
             width: 100%;
+            margin-bottom: -3px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.16),
+              0 2px 2px rgba(0, 0, 0, 0.23);
           `}
           ref={setRef}
           src={imageSrc}

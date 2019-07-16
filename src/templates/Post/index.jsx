@@ -19,7 +19,7 @@ const ProjectLink = styled(Link)`
 
   &:hover {
     color: #fff;
-    background-color: #de356a;
+    background-color: #28cc75;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
   }
 `;
@@ -90,7 +90,7 @@ const Post = props => {
               @media (max-width: 1024px) {
                 height: auto;
                 object-fit: contain;
-                margin-bottom: -2px;
+                margin-bottom: -3px;
               }
             `}
             src={imageSrc}
@@ -172,18 +172,30 @@ const Post = props => {
               {post.tags.map(tag => (
                 <li
                   css={css`
-                    padding: 0.5rem;
                     margin-top: 0.5rem;
                     margin-right: 0.5rem;
-                    border: 1px solid white;
-                    background: white;
-                    border-radius: 2px;
-                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16),
-                      0 1px 2px rgba(0, 0, 0, 0.23);
                   `}
                   key={tag}
                 >
-                  <Link to={`/tag/${tag}`}>#{tag}</Link>
+                  <Link
+                    to={`/tag/${tag}`}
+                    css={css`
+                      display: block;
+                      padding: 0.5rem;
+                      background: white;
+                      border-radius: 2px;
+                      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16),
+                        0 1px 2px rgba(0, 0, 0, 0.23);
+                      transition: all 0.5s ease;
+
+                      &:hover {
+                        color: white;
+                        background-color: #f54ea2;
+                      }
+                    `}
+                  >
+                    #{tag}
+                  </Link>
                 </li>
               ))}
             </ul>

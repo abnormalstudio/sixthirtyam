@@ -35,7 +35,7 @@ const Index = () => (
             align-content: flex-start;
             overflow-y: scroll;
             height: 100vh;
-            padding: 0.25rem;
+            padding: 5px;
 
             @media (max-width: 1024px) {
               height: auto;
