@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Noto Serif SC", serif;
+  font-family: "Krub", sans-serif;
   font-size: 18px;
 }
 
@@ -11,6 +11,7 @@ p {
   font-size: 1rem;
   line-height: 1.4rem;
   margin-bottom: 1rem;
+  font-family: "Noto Serif SC", serif;
 }
 
 h1,
@@ -19,12 +20,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Abhaya Libre", serif;
+  font-family: "Zilla Slab", serif;
 }
 
 a {
   text-decoration: none;
-  color: #de356a;
+  color: #6384b3;
 }
 a:hover {
   color: #540e33;

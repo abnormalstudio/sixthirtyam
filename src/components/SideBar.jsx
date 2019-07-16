@@ -52,7 +52,7 @@ const Aside = styled.div`
 const Name = styled.h1`
   font-size: 3.6rem;
   text-align: center;
-  color: #540e33;
+  color: #ab72c0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.16), 0 1px 2px rgba(0, 0, 0, 0.23);
 
   @media (max-width: 1024px) {
