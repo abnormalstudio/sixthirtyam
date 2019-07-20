@@ -24,6 +24,10 @@ exports.createPages = ({ graphql, actions }) => {
                 childMarkdownRemark {
                   html
                   excerpt
+                  wordCount {
+                    words
+                    paragraphs
+                  }
                 }
               }
               photo {

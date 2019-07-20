@@ -34,6 +34,11 @@ const Post = props => {
     ? post.description.childMarkdownRemark.excerpt
     : `Outfit ${post.date}`;
 
+  const longerPost =
+    post.description &&
+    (post.description.childMarkdownRemark.wordCount.words >= 50 ||
+      post.description.childMarkdownRemark.wordCount.paragraphs >= 5);
+
   return (
     <Layout>
       <Helmet title={post.date}>
@@ -117,7 +122,7 @@ const Post = props => {
             css={css`
               font-size: 1.2rem;
               position: absolute;
-              top: 50vh;
+              top: ${longerPost ? "15vh" : "50vh"};
               transform: translateY(-0.6rem);
               left: 2rem;
 
@@ -136,7 +141,7 @@ const Post = props => {
               css={css`
                 padding: 2rem;
                 position: absolute;
-                top: 50vh;
+                top: ${longerPost ? "15vh" : "50vh"};
 
                 @media (max-width: 1024px) {
                   padding: 0px;
