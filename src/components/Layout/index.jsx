@@ -49,6 +49,10 @@ const Layout = props => (
             href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300%7CKrub:300%7CZilla+Slab:500&display=swap"
             rel="stylesheet"
           />
+          <meta
+            name="google-site-verification"
+            content="UO93C_KqxMrPI6RaAIK1sQXtQFBVEJS3R2xcvZYFgDQ"
+          />
         </Helmet>
         <SideBar />
         <Main>{props.children}</Main>
