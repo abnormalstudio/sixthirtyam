@@ -148,6 +148,11 @@ const Post = props => {
                   margin: 1rem 0px 1rem 1rem;
                   position: static;
                 }
+
+                h1 {
+                  margin-bottom: 1rem;
+                  font-size: 1.5rem;
+                }
               `}
             >
               <div
