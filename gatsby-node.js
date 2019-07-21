@@ -20,6 +20,7 @@ exports.createPages = ({ graphql, actions }) => {
               id
               date(formatString: "DD.MM.YYYY")
               tags
+              metaTags
               description {
                 childMarkdownRemark {
                   html
@@ -28,6 +29,11 @@ exports.createPages = ({ graphql, actions }) => {
                     words
                     paragraphs
                   }
+                }
+              }
+              outfit {
+                childMarkdownRemark {
+                  html
                 }
               }
               photo {

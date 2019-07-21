@@ -39,9 +39,14 @@ const Post = props => {
     (post.description.childMarkdownRemark.wordCount.words >= 50 ||
       post.description.childMarkdownRemark.wordCount.paragraphs >= 5);
 
+  const keywords =
+    post.metaTags && post.metaTags.length > 0 ? post.metaTags : post.tags;
+
   return (
     <Layout>
       <Helmet title={post.date}>
+        <meta name="author" content="Marian Serna" />
+        <meta name="keywords" content={keywords.join(",")} />
         <meta name="description" content={description} />
         <meta name="twitter:card" value={`Outfit ${post.date}`} />
         <meta property="og:title" content={`Outfit ${post.date}`} />
@@ -160,6 +165,17 @@ const Post = props => {
                   __html: post.description.childMarkdownRemark.html
                 }}
               />
+              {post.outfit && (
+                <div
+                  css={css`
+                    color: white;
+                    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+                  `}
+                  dangerouslySetInnerHTML={{
+                    __html: post.outfit.childMarkdownRemark.html
+                  }}
+                />
+              )}
             </div>
           )}
 
