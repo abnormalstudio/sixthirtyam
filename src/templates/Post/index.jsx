@@ -25,7 +25,7 @@ const ProjectLink = styled(Link)`
 `;
 
 const Post = props => {
-  const { post, next, prev } = props.pathContext;
+  const { post, next, prev, current } = props.pathContext;
   const { imageSrc, setRef } = useLazy(
     post.photo.resize.base64,
     post.photo.resize.src
@@ -33,11 +33,6 @@ const Post = props => {
   const description = post.description
     ? post.description.childMarkdownRemark.excerpt
     : `Outfit ${post.date}`;
-
-  const longerPost =
-    post.description &&
-    (post.description.childMarkdownRemark.wordCount.words >= 50 ||
-      post.description.childMarkdownRemark.wordCount.paragraphs >= 5);
 
   const keywords =
     post.metaTags && post.metaTags.length > 0 ? post.metaTags : post.tags;
@@ -51,7 +46,10 @@ const Post = props => {
         <meta name="twitter:card" value={`Outfit ${post.date}`} />
         <meta property="og:title" content={`Outfit ${post.date}`} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.sixthirtyam.com/" />
+        <meta
+          property="og:url"
+          content={`https://www.sixthirtyam.com${current}`}
+        />
         <meta property="og:image" content={post.photo.resize.src} />
         <meta property="og:description" content={description} />
       </Helmet>
@@ -127,7 +125,7 @@ const Post = props => {
             css={css`
               font-size: 1.2rem;
               position: absolute;
-              top: ${longerPost ? "15vh" : "50vh"};
+              top: 15vh;
               transform: translateY(-0.6rem);
               left: 2rem;
 
@@ -146,7 +144,7 @@ const Post = props => {
               css={css`
                 padding: 2rem;
                 position: absolute;
-                top: ${longerPost ? "15vh" : "50vh"};
+                top: 15vh;
 
                 @media (max-width: 1024px) {
                   padding: 0px;

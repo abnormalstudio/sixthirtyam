@@ -70,13 +70,16 @@ exports.createPages = ({ graphql, actions }) => {
       }, {});
 
       posts.forEach(({ next, previous, node }) => {
+        const current = `/outfit/${slugify(node.date)}`;
+
         createPage({
-          path: `/outfit/${slugify(node.date)}`,
+          path: current,
           component: path.resolve("./src/templates/Post/index.jsx"),
           context: {
             post: node,
             next: next ? `/outfit/${slugify(next.date)}` : null,
-            prev: previous ? `/outfit/${slugify(previous.date)}` : null
+            prev: previous ? `/outfit/${slugify(previous.date)}` : null,
+            current
           }
         });
       });
