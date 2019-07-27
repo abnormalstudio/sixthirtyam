@@ -39,7 +39,11 @@ const Tile = ({ post }) => {
           `}
           ref={setRef}
           src={imageSrc}
-          alt={post.date}
+          alt={
+            post.tags
+              ? `Outfit on ${post.date} - ${post.tags.join(", ")}`
+              : `Outfit on ${post.date}`
+          }
         />
       </Link>
     </div>

@@ -103,7 +103,11 @@ const Post = props => {
             `}
             src={imageSrc}
             ref={setRef}
-            alt={post.date}
+            alt={
+              post.tags
+                ? `Outfit on ${post.date} - ${post.tags.join(", ")}`
+                : `Outfit on ${post.date}`
+            }
           />
         </div>
 

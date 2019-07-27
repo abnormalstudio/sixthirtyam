@@ -13,6 +13,7 @@ const Index = () => (
             node {
               id
               date(formatString: "DD.MM.YYYY")
+              tags
               photo {
                 resize(height: 800, quality: 80) {
                   src
