@@ -53,6 +53,10 @@ const Layout = props => (
             name="google-site-verification"
             content="UO93C_KqxMrPI6RaAIK1sQXtQFBVEJS3R2xcvZYFgDQ"
           />
+          <meta
+            name="p:domain_verify"
+            content="040223d680afb2c77d67281d5ad44f95"
+          />
         </Helmet>
         <SideBar />
         <Main>{props.children}</Main>
